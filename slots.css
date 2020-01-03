@@ -23,6 +23,10 @@ button {
   font-size: 7pt;
 }
 
+.button2 {
+  margin-top: 12px;
+}
+
 #info {
   position: absolute;
   top: 20px;
@@ -44,7 +48,7 @@ button {
 #attribution {
   text-align: right;
   width: 280px;
-  font-size: 7pt;
+  font-size: 6pt;
   color: #666666;
   font-family: arial, helvetica, sans-serif;
   margin-top: 20px;
@@ -53,4 +57,3 @@ button {
 #attribution a {
   color: #6666ff;
 }
-
