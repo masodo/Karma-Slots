@@ -2,6 +2,33 @@
   <head>
 
     <title>Karma Slots!</title>
+<script>
+function bell(high){
+function scorepost(href, named, scored) {
+		    var gform = document.createElement('form');
+		    gform.method = 'post';
+		    gform.action = href;
+		    gform.target = '_top';
+		    var input = document.createElement('input');
+		        input.setAttribute('name', 'gname');
+		        input.setAttribute('value', named);
+		        gform.appendChild(input);
+		    var input2 = document.createElement('input');
+		        input2.setAttribute('name', 'gscore');
+		        input2.setAttribute('value', scored);
+		        gform.appendChild(input2);
+		    document.body.appendChild(gform);
+		    gform.submit();
+		    document.body.removeChild(gform);
+}
+let pathArray = window.location.pathname.split('/');
+            let newpath = '';
+            if (pathArray[1] && pathArray[1] != 'arcade' && pathArray[1] != 'games') {
+				newpath = '/' + pathArray[1];
+            }
+scorepost(window.location.protocol + '//' + window.location.hostname + newpath + '/index.php?act=Arcade&do=newscore', 'KarmaSlots_masodo', high);
+}
+</script>	
     <script type="text/javascript" src="slots.js"></script>
     <link rel="stylesheet" type="text/css" href="slots.css" />
 
@@ -15,6 +42,7 @@
         <button type="button" onclick="spin(1);">1 Line</button>
         <button type="button" onclick="spin(3);">3 Lines</button>
         <button type="button" onclick="spin(5);">5 Lines</button>
+	<button type="button" class="button2" onclick="bell(credits);">Submit Score</button>
       </div>
 
       <div id="info">
@@ -23,7 +51,7 @@
       </div>
 
       <div id="attribution">
-        by <a href="http://clintbellanger.net/rpg/" target="_blank">Clint Bellanger</a> and <a href="http://www.youtube.com/brandon75689" target="_blank">Brandon Morris</a>
+        <a href="PayTable.htm" target="_blank"><b>Pay Table</b></a> - game by <a href="http://clintbellanger.net/rpg/" target="_blank">Clint Bellanger</a> and <a href="http://www.youtube.com/brandon75689" target="_blank">Brandon Morris</a>
       </div>
 
     </div>
